@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_finals/profile_selection.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -82,7 +83,12 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 15),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ProfilePage()));
+              },
               style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF121213),
                   side: const BorderSide(width: 1, color: Colors.black),
