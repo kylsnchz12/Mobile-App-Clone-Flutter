@@ -14,6 +14,7 @@ class _LoginPageState extends State<LoginPage> {
       backgroundColor: const Color(0xFF121213),
       appBar: AppBar(
         backgroundColor: Colors.black,
+        elevation: 0,
         title: Image.asset(
           'assets/images/Logonetflix.png',
           height: 100,
