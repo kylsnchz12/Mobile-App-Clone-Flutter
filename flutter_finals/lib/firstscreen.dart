@@ -78,6 +78,39 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
+            ),
+            const SizedBox(height: 15),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF121213),
+                  side: const BorderSide(width: 1, color: Colors.black),
+                  minimumSize: const Size(300, 55) // Background color
+                  ),
+              child: const Text('Sign in',
+                  style: TextStyle(
+                      color: Color(0xFFa7a7a6), fontWeight: FontWeight.bold)),
+            ),
+            const SizedBox(height: 25),
+            TextButton(
+              onPressed: () {},
+              child: const Text(
+                'Recover Password',
+                style: TextStyle(
+                    color: Color(0xFFb2b2b3), fontWeight: FontWeight.bold),
+              ),
+            ),
+            const SizedBox(height: 18),
+            const SizedBox(
+              width: 300,
+              child: Text(
+                'Sign in is protected by Google reCAPTCHA to ensure you\'re not a bot.',
+                style: TextStyle(
+                    color: Color(0xFFb2b2b3),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12),
+                textAlign: TextAlign.center,
+              ),
             )
           ],
         ),
