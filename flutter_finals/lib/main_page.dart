@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_finals/json/mainpage_json.dart';
+import 'package:flutter_finals/pages/comingsoon_page.dart';
 import 'package:flutter_finals/pages/home_page.dart';
 
 class MainPage extends StatefulWidget {
@@ -29,11 +30,9 @@ class _MainPageState extends State<MainPage> {
         HomePage(
           img: widget.img,
         ),
-        const Center(
-            child: Text(
-          "Coming Soon!",
-          style: TextStyle(fontSize: 20, color: Colors.white),
-        )),
+        ComingSoonPage(
+          img: widget.img,
+        ),
         const Center(
             child: Text(
           "Search",
