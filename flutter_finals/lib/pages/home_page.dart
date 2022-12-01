@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons_null_safe/flutter_icons_null_safe.dart';
-
 import '../json/homepage_json.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final String img;
+  const HomePage({super.key, required this.img});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -22,6 +22,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget getBody() {
     var size = MediaQuery.of(context).size;
+
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
       child: SingleChildScrollView(
@@ -168,7 +169,79 @@ class _HomePageState extends State<HomePage> {
                               );
                             })),
                           ),
-                        )
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 15),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.only(left: 15, right: 15),
+                          child: Text(
+                            'Popular on Netflix',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18),
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Row(
+                                children: List.generate(myList.length, (index) {
+                              return Container(
+                                width: 110,
+                                height: 160,
+                                margin: const EdgeInsets.only(right: 8),
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage(myList[index]['img']),
+                                    ),
+                                    borderRadius: BorderRadius.circular(7)),
+                              );
+                            })),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 15),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.only(left: 15, right: 15),
+                          child: Text(
+                            'Netflix Originals',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18),
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Row(
+                                children: List.generate(myList.length, (index) {
+                              return Container(
+                                width: 110,
+                                height: 160,
+                                margin: const EdgeInsets.only(right: 8),
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage(myList[index]['img']),
+                                    ),
+                                    borderRadius: BorderRadius.circular(7)),
+                              );
+                            })),
+                          ),
+                        ),
                       ],
                     )
                   ],
@@ -218,11 +291,8 @@ class _HomePageState extends State<HomePage> {
                                 onTap: () {},
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(3),
-                                  child: Image.asset(
-                                      'assets/images/profile1.png',
-                                      width: 30,
-                                      height: 30,
-                                      fit: BoxFit.cover),
+                                  child: Image.asset(widget.img,
+                                      width: 30, height: 30, fit: BoxFit.cover),
                                 ),
                               ),
                             ),

@@ -3,7 +3,8 @@ import 'package:flutter_finals/json/mainpage_json.dart';
 import 'package:flutter_finals/pages/home_page.dart';
 
 class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+  final String img;
+  const MainPage({super.key, required this.img});
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -24,19 +25,21 @@ class _MainPageState extends State<MainPage> {
   Widget getBody() {
     return IndexedStack(
       index: activeTab,
-      children: const [
-        HomePage(),
-        Center(
+      children: [
+        HomePage(
+          img: widget.img,
+        ),
+        const Center(
             child: Text(
           "Coming Soon!",
           style: TextStyle(fontSize: 20, color: Colors.white),
         )),
-        Center(
+        const Center(
             child: Text(
           "Search",
           style: TextStyle(fontSize: 20, color: Colors.white),
         )),
-        Center(
+        const Center(
             child: Text(
           "Downloads",
           style: TextStyle(fontSize: 20, color: Colors.white),
