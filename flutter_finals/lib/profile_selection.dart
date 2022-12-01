@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_finals/main_page.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -44,7 +45,14 @@ class _ProfilePageState extends State<ProfilePage> {
                       Material(
                         color: Colors.black,
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const MainPage(
+                                          img: 'assets/images/profile1.png',
+                                        )));
+                          },
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8),
                             child: Image.asset('assets/images/profile1.png',
@@ -68,7 +76,14 @@ class _ProfilePageState extends State<ProfilePage> {
                       Material(
                         color: Colors.black,
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const MainPage(
+                                          img: 'assets/images/profile2.png',
+                                        )));
+                          },
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8),
                             child: Image.asset('assets/images/profile2.png',
@@ -97,7 +112,14 @@ class _ProfilePageState extends State<ProfilePage> {
                       Material(
                         color: Colors.black,
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const MainPage(
+                                          img: 'assets/images/profile3.png',
+                                        )));
+                          },
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8),
                             child: Image.asset('assets/images/profile3.png',
@@ -121,7 +143,14 @@ class _ProfilePageState extends State<ProfilePage> {
                       Material(
                         color: Colors.black,
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const MainPage(
+                                          img: 'assets/images/profile4.png',
+                                        )));
+                          },
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8),
                             child: Image.asset('assets/images/profile4.png',
@@ -147,7 +176,14 @@ class _ProfilePageState extends State<ProfilePage> {
                   Material(
                     color: Colors.black,
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const MainPage(
+                                      img: 'assets/images/kidsprofile.png',
+                                    )));
+                      },
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset('assets/images/kidsprofile.png',
