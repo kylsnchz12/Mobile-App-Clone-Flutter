@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_finals/homepage.dart';
+import 'package:flutter_finals/main_page.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -49,7 +49,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const HomePage()));
+                                    builder: (context) => const MainPage()));
                           },
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8),

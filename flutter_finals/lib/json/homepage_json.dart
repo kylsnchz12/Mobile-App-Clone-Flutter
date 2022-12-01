@@ -1,8 +1,7 @@
-import 'package:flutter_icons_null_safe/flutter_icons_null_safe.dart';
-
-List items = [
-  {"icon": AntDesign.home, "text": "Home"},
-  {"icon": AntDesign.playcircleo, "text": "Coming Soon"},
-  {"icon": AntDesign.search1, "text": "Search"},
-  {"icon": AntDesign.download, "text": "Downloads"},
+const List myList = [
+  {"img": "assets/images/mov_1.png"},
+  {"img": "assets/images/mov_2.jpeg"},
+  {"img": "assets/images/mov_3.jpeg"},
+  {"img": "assets/images/mov_4.jpg"},
+  {"img": "assets/images/mov_5.jpeg"}
 ];
