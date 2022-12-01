@@ -30,7 +30,9 @@ class _MainPageState extends State<MainPage> {
         HomePage(
           img: widget.img,
         ),
-        ComingSoonPage(),
+        ComingSoonPage(
+          img: widget.img,
+        ),
         const Center(
             child: Text(
           "Search",
