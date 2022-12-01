@@ -1,4 +1,4 @@
-import 'package:flutter_icons/flutter_icons.dart';
+import 'package:flutter_icons_null_safe/flutter_icons_null_safe.dart';
 
 List items = [
   {"icon": AntDesign.home, "text": "Home"},

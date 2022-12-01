@@ -22,17 +22,26 @@ class _HomePageState extends State<HomePage> {
     return Container(
       height: 80,
       decoration: const BoxDecoration(color: Colors.black),
-      child: Row(
-        children: [
-          Column(
-            children: [
-              Icon(
-                items[0]['icon'],
-                color: Colors.white,
-              )
-            ],
-          )
-        ],
+      child: Padding(
+        padding: const EdgeInsets.only(left: 20, right: 20, top: 5),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: List.generate(items.length, (index) {
+            return Column(
+              children: [
+                Icon(
+                  items[index]['icon'],
+                  color: Colors.white,
+                ),
+                const SizedBox(height: 5),
+                Text(
+                  items[index]['text'],
+                  style: const TextStyle(color: Colors.white, fontSize: 10),
+                )
+              ],
+            );
+          }),
+        ),
       ),
     );
   }
