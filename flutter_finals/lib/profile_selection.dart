@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_finals/homepage.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -44,7 +45,12 @@ class _ProfilePageState extends State<ProfilePage> {
                       Material(
                         color: Colors.black,
                         child: InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const HomePage()));
+                          },
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8),
                             child: Image.asset('assets/images/profile1.png',
