@@ -192,14 +192,15 @@ class _HomePageState extends State<HomePage> {
                           child: Padding(
                             padding: const EdgeInsets.only(left: 10),
                             child: Row(
-                                children: List.generate(myList.length, (index) {
+                                children:
+                                    List.generate(popular.length, (index) {
                               return Container(
                                 width: 110,
                                 height: 160,
                                 margin: const EdgeInsets.only(right: 8),
                                 decoration: BoxDecoration(
                                     image: DecorationImage(
-                                      image: AssetImage(myList[index]['img']),
+                                      image: AssetImage(popular[index]['img']),
                                     ),
                                     borderRadius: BorderRadius.circular(7)),
                               );
@@ -228,14 +229,14 @@ class _HomePageState extends State<HomePage> {
                           child: Padding(
                             padding: const EdgeInsets.only(left: 10),
                             child: Row(
-                                children: List.generate(myList.length, (index) {
+                                children: List.generate(nf.length, (index) {
                               return Container(
                                 width: 110,
                                 height: 160,
                                 margin: const EdgeInsets.only(right: 8),
                                 decoration: BoxDecoration(
                                     image: DecorationImage(
-                                      image: AssetImage(myList[index]['img']),
+                                      image: AssetImage(nf[index]['img']),
                                     ),
                                     borderRadius: BorderRadius.circular(7)),
                               );
