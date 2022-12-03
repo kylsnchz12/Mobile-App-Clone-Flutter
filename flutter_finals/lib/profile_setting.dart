@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_finals/buttons/button_active.dart';
 import 'package:flutter_finals/buttons/buttons.dart';
 import 'package:flutter_finals/json/button_json.dart';
-import 'package:flutter_finals/json/mainpage_json.dart';
+import 'package:flutter_finals/login_screen.dart';
+import 'package:flutter_finals/profile_selection.dart';
 
 class ProfileSetting extends StatefulWidget {
   final String img;
@@ -55,17 +56,25 @@ class _ProfileSettingState extends State<ProfileSetting> {
                   }
                 }),
               ),
-              const SizedBox(height: 40),
+              const SizedBox(height: 25),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Icon(Icons.edit_note, color: Colors.white),
-                  SizedBox(width: 5),
-                  Text(
-                    'Manage Profile',
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.w600),
-                  )
+                children: [
+                  const Icon(Icons.edit_note, color: Colors.white),
+                  const SizedBox(width: 5),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                              pageBuilder: (_, __, ___) => const ProfilePage()),
+                        );
+                      },
+                      child: const Text(
+                        'Manage Profile',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.w600),
+                      ))
                 ],
               ),
               const SizedBox(height: 25),
@@ -350,9 +359,15 @@ class _ProfileSettingState extends State<ProfileSetting> {
                 ],
               ),
               const SizedBox(height: 30),
-              const TextButton(
-                  onPressed: null,
-                  child: Text(
+              TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      PageRouteBuilder(
+                          pageBuilder: (_, __, ___) => const LoginPage()),
+                    );
+                  },
+                  child: const Text(
                     "Sign Out",
                     style: TextStyle(color: Colors.white),
                   ))
