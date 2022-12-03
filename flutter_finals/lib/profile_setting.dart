@@ -305,7 +305,7 @@ class _ProfileSettingState extends State<ProfileSetting> {
                             Row(
                               children: [
                                 Icon(
-                                  Icons.verified_user_outlined,
+                                  Icons.account_circle_outlined,
                                   color: Colors.white.withOpacity(0.9),
                                   size: 28,
                                 ),
