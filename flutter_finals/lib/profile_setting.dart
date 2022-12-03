@@ -44,9 +44,15 @@ class _ProfileSettingState extends State<ProfileSetting> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: List.generate(buttonProfile.length, (index) {
-                  return ActiveButton(
-                      img: buttonProfile[index]["img"],
-                      name: buttonProfile[index]["name"]);
+                  if (widget.name == buttonProfile[index]["name"]) {
+                    return ActiveButton(
+                        img: buttonProfile[index]["img"],
+                        name: buttonProfile[index]["name"]);
+                  } else {
+                    return MyButton(
+                        img: buttonProfile[index]["img"],
+                        name: buttonProfile[index]["name"]);
+                  }
                 }),
               ),
               const SizedBox(height: 40),

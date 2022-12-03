@@ -11,17 +11,10 @@ class MyButton extends StatelessWidget {
     return Column(
       children: [
         Material(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(8),
-          child: Padding(
-            padding: const EdgeInsets.all(2),
-            child: InkWell(
-              onTap: () {},
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: Image.asset(img, width: 60, height: 60),
-              ),
-            ),
+          color: const Color(0xff121213),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(8),
+            child: Image.asset(img, width: 60, height: 60),
           ),
         ),
         const SizedBox(height: 8),
