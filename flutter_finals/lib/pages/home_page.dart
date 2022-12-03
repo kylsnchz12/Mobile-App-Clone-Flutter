@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_finals/main_page.dart';
 import 'package:flutter_finals/profile_setting.dart';
 import 'package:flutter_icons_null_safe/flutter_icons_null_safe.dart';
 import '../json/homepage_json.dart';

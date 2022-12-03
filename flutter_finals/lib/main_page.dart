@@ -34,7 +34,7 @@ class _MainPageState extends State<MainPage> {
           img: widget.img,
           name: widget.name,
         ),
-        SearchPage(),
+        const SearchPage(),
         const Center(
             child: Text(
           "Downloads",

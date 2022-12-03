@@ -9,6 +9,8 @@ class SearchPage extends StatefulWidget {
 }
 
 class _SearchPageState extends State<SearchPage> {
+  List results = searchJson;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,6 +22,23 @@ class _SearchPageState extends State<SearchPage> {
   }
 
   Widget getAppBar() {
+    void runFilter(String enteredKeyword) {
+      List searching;
+      if (enteredKeyword.isEmpty) {
+        searching = searchJson;
+      } else {
+        searching = searchJson
+            .where((result) => result["title"]
+                .toLowerCase()
+                .contains(enteredKeyword.toLowerCase()))
+            .toList();
+      }
+
+      setState(() {
+        results = searching;
+      });
+    }
+
     return AppBar(
       backgroundColor: Colors.black,
       elevation: 0,
@@ -31,6 +50,8 @@ class _SearchPageState extends State<SearchPage> {
             color: Colors.grey.withOpacity(0.25),
             borderRadius: BorderRadius.circular(5)),
         child: TextField(
+          onChanged: (value) => runFilter(value),
+          style: TextStyle(color: Colors.white.withOpacity(0.5)),
           decoration: InputDecoration(
               border: InputBorder.none,
               hintText: "Search",
@@ -46,6 +67,7 @@ class _SearchPageState extends State<SearchPage> {
 
   Widget getBody() {
     var size = MediaQuery.of(context).size;
+
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.only(top: 10, left: 18, right: 18),
@@ -61,7 +83,7 @@ class _SearchPageState extends State<SearchPage> {
             ),
             const SizedBox(height: 12),
             Column(
-                children: List.generate(searchJson.length, (index) {
+                children: List.generate(results.length, (index) {
               return Padding(
                 padding: const EdgeInsets.only(bottom: 10),
                 child: Row(
@@ -79,8 +101,8 @@ class _SearchPageState extends State<SearchPage> {
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(5),
                                     image: DecorationImage(
-                                        image: AssetImage(
-                                            searchJson[index]['img']),
+                                        image:
+                                            AssetImage(results[index]['img']),
                                         fit: BoxFit.cover)),
                               ),
                               Container(
@@ -95,7 +117,7 @@ class _SearchPageState extends State<SearchPage> {
                           SizedBox(
                             width: (size.width - 36) * 0.4,
                             child: Text(
-                              searchJson[index]['title'],
+                              results[index]['title'],
                               style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 15,

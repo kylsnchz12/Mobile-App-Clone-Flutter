@@ -41,6 +41,7 @@ class _LoginPageState extends State<LoginPage> {
               width: 300,
               child: TextField(
                   maxLines: 1,
+                  style: const TextStyle(color: Color(0xFFa7a7a6)),
                   decoration: InputDecoration(
                     hintText: 'Email or phone number',
                     hintStyle: const TextStyle(
@@ -59,6 +60,7 @@ class _LoginPageState extends State<LoginPage> {
               width: 300,
               child: TextField(
                 maxLines: 1,
+                style: const TextStyle(color: Color(0xFFa7a7a6)),
                 decoration: InputDecoration(
                   hintText: 'Password',
                   hintStyle: const TextStyle(
