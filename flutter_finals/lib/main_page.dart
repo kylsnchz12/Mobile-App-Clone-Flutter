@@ -5,7 +5,8 @@ import 'package:flutter_finals/pages/home_page.dart';
 
 class MainPage extends StatefulWidget {
   final String img;
-  const MainPage({super.key, required this.img});
+  final String name;
+  const MainPage({super.key, required this.img, required this.name});
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -27,9 +28,7 @@ class _MainPageState extends State<MainPage> {
     return IndexedStack(
       index: activeTab,
       children: [
-        HomePage(
-          img: widget.img,
-        ),
+        HomePage(img: widget.img, name: widget.name),
         ComingSoonPage(
           img: widget.img,
         ),

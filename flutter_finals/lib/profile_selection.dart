@@ -15,6 +15,7 @@ class _ProfilePageState extends State<ProfilePage> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        centerTitle: true,
         backgroundColor: Colors.black,
         elevation: 0,
         title: const Text(
@@ -52,6 +53,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 MaterialPageRoute(
                                     builder: (context) => const MainPage(
                                           img: 'assets/images/profile1.png',
+                                          name: 'Zeth',
                                         )));
                           },
                           child: ClipRRect(
@@ -83,6 +85,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 MaterialPageRoute(
                                     builder: (context) => const MainPage(
                                           img: 'assets/images/profile2.png',
+                                          name: 'Jeremy',
                                         )));
                           },
                           child: ClipRRect(
@@ -119,6 +122,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 MaterialPageRoute(
                                     builder: (context) => const MainPage(
                                           img: 'assets/images/profile3.png',
+                                          name: 'Gilles',
                                         )));
                           },
                           child: ClipRRect(
@@ -150,6 +154,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 MaterialPageRoute(
                                     builder: (context) => const MainPage(
                                           img: 'assets/images/profile4.png',
+                                          name: 'Jazphyr',
                                         )));
                           },
                           child: ClipRRect(
@@ -183,6 +188,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             MaterialPageRoute(
                                 builder: (context) => const MainPage(
                                       img: 'assets/images/kidsprofile.png',
+                                      name: 'Kids',
                                     )));
                       },
                       child: ClipRRect(
