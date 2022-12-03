@@ -22,7 +22,7 @@ const List soon = [
     "value": 0.20
   },
   {
-    "img": "assets/images/cs_3.jpeg",
+    "img": "assets/images/cs_3.jpg",
     "title_img": "assets/images/csTitle_3.png",
     "title": "A Boy Called Christmas",
     "description":
