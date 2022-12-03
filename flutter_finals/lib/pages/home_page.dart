@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_finals/main_page.dart';
 import 'package:flutter_finals/profile_setting.dart';
-import 'package:flutter_icons_null_safe/flutter_icons_null_safe.dart';
 import '../json/homepage_json.dart';
 
 class HomePage extends StatefulWidget {
@@ -283,8 +281,8 @@ class _HomePageState extends State<HomePage> {
                             IconButton(
                               onPressed: () {},
                               icon: const Icon(
-                                AntDesign.search1,
-                                size: 24,
+                                Icons.notifications_none_outlined,
+                                size: 30,
                                 color: Colors.white,
                               ),
                             ),
