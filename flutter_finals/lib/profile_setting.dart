@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_finals/buttons/button_active.dart';
+import 'package:flutter_finals/buttons/buttons.dart';
+import 'package:flutter_finals/json/button_json.dart';
 import 'package:flutter_finals/json/mainpage_json.dart';
 
 class ProfileSetting extends StatefulWidget {
@@ -40,117 +43,11 @@ class _ProfileSettingState extends State<ProfileSetting> {
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Column(
-                    children: [
-                      Material(
-                        color: Colors.black,
-                        child: InkWell(
-                          onTap: () {},
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(8),
-                            child: Image.asset('assets/images/kidsprofile.png',
-                                width: 60, height: 60),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 8),
-                      Text(
-                        widget.name,
-                        style: const TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  ),
-                  const SizedBox(width: 5),
-                  Column(
-                    children: [
-                      Material(
-                        color: Colors.black,
-                        child: InkWell(
-                          onTap: () {},
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(8),
-                            child: Image.asset('assets/images/kidsprofile.png',
-                                width: 60, height: 60),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 8),
-                      Text(
-                        widget.name,
-                        style: const TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  ),
-                  const SizedBox(width: 5),
-                  Column(
-                    children: [
-                      Material(
-                        color: Colors.black,
-                        child: InkWell(
-                          onTap: () {},
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(8),
-                            child: Image.asset('assets/images/kidsprofile.png',
-                                width: 60, height: 60),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 8),
-                      Text(
-                        widget.name,
-                        style: const TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  ),
-                  const SizedBox(width: 5),
-                  Column(
-                    children: [
-                      Material(
-                        color: Colors.black,
-                        child: InkWell(
-                          onTap: () {},
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(8),
-                            child: Image.asset('assets/images/kidsprofile.png',
-                                width: 60, height: 60),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 8),
-                      Text(
-                        widget.name,
-                        style: const TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  ),
-                  const SizedBox(width: 5),
-                  Column(
-                    children: [
-                      Material(
-                        color: Colors.black,
-                        child: InkWell(
-                          onTap: () {},
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(8),
-                            child: Image.asset('assets/images/kidsprofile.png',
-                                width: 60, height: 60),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 8),
-                      Text(
-                        widget.name,
-                        style: const TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  ),
-                ],
+                children: List.generate(buttonProfile.length, (index) {
+                  return ActiveButton(
+                      img: buttonProfile[index]["img"],
+                      name: buttonProfile[index]["name"]);
+                }),
               ),
               const SizedBox(height: 40),
               Row(
