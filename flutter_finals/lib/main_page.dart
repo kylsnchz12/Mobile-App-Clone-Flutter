@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_finals/json/mainpage_json.dart';
 import 'package:flutter_finals/pages/comingsoon_page.dart';
 import 'package:flutter_finals/pages/home_page.dart';
+import 'package:flutter_finals/pages/search_page.dart';
 
 class MainPage extends StatefulWidget {
   final String img;
@@ -33,11 +34,7 @@ class _MainPageState extends State<MainPage> {
           img: widget.img,
           name: widget.name,
         ),
-        const Center(
-            child: Text(
-          "Search",
-          style: TextStyle(fontSize: 20, color: Colors.white),
-        )),
+        SearchPage(),
         const Center(
             child: Text(
           "Downloads",
