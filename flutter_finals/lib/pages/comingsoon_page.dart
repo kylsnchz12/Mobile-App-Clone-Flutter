@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_finals/json/comingsoon_json.dart';
+import 'package:flutter_finals/profile_setting.dart';
 
 class ComingSoonPage extends StatefulWidget {
   final String img;
-  const ComingSoonPage({super.key, required this.img});
+  final String name;
+  const ComingSoonPage({super.key, required this.img, required this.name});
 
   @override
   State<ComingSoonPage> createState() => _ComingSoonPageState();
@@ -46,7 +48,14 @@ class _ComingSoonPageState extends State<ComingSoonPage> {
               Material(
                 color: Colors.black,
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      PageRouteBuilder(
+                          pageBuilder: (_, __, ___) => ProfileSetting(
+                              img: widget.img, name: widget.name)),
+                    );
+                  },
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(3),
                     child: Image.asset(widget.img,
