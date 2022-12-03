@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_finals/main_page.dart';
+import 'package:flutter_finals/profile_setting.dart';
 import 'package:flutter_icons_null_safe/flutter_icons_null_safe.dart';
 import '../json/homepage_json.dart';
 
 class HomePage extends StatefulWidget {
   final String img;
-  const HomePage({super.key, required this.img});
+  final String name;
+  const HomePage({super.key, required this.img, required this.name});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -289,7 +292,16 @@ class _HomePageState extends State<HomePage> {
                             Material(
                               color: Colors.black,
                               child: InkWell(
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    PageRouteBuilder(
+                                        pageBuilder: (_, __, ___) =>
+                                            ProfileSetting(
+                                                img: widget.img,
+                                                name: widget.name)),
+                                  );
+                                },
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(3),
                                   child: Image.asset(widget.img,
